@@ -15,28 +15,21 @@
 
 body {
     background-color: var(--Dark_cyan);
+    background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg); /*TODO: richtig positionieren */
+    width: 100%; /*TODO: muss weg oder? */
+    background-position: -50% 50%, 0% 0%;
+    background-repeat: no-repeat;
     
 }
 
-.upper-pattern{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -50%;
-    top: -50%;
-    z-index: -1;
+header, main {
+    max-width: 375px;
     
 }
-.bottom-pattern{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    right: -50%;
-    bottom: -50%;
-    z-index: -1;
-    overflow: hidden;
-    
-}
+
+
+
 
 main {
     width: 90%;
@@ -48,7 +41,7 @@ main {
 }
 header {
     width: 90%;
-    margin: 1rem auto 0px;
+    margin: 3rem auto 0px;
 
 }
 
