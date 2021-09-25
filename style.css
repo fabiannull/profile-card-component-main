@@ -10,39 +10,32 @@
     --Very_dark_desaturated_blue: hsl(229, 23%, 23%);
     --Dark_grayish_blue: hsl(227, 10%, 46%);
     --Dark_gray: hsl(0, 0%, 59%);
-    --Background-Color: white; /*TODO: das weiß noch in creme oder so abändern */
+    --Background-Color: rgb(255, 255, 255); 
 }
 
 body {
     background-color: var(--Dark_cyan);
     background-image: url(images/bg-pattern-top.svg),
-    url(images/bg-pattern-bottom.svg); /*TODO: richtig positionieren */
-    width: 100%; /*TODO: muss weg oder? */
-    background-position: -50% 50%, 0% 0%;
-    background-repeat: no-repeat;
-    
+    url(images/bg-pattern-bottom.svg);     
+    background-position: 160% 140%, -50% -70%;
+    background-repeat: no-repeat;    
 }
 
 header, main {
-    max-width: 375px;
-    
+    max-width: 375px;    
 }
-
-
-
 
 main {
     width: 90%;
     margin: auto;
     text-align: center;
     background-color: var(--Background-Color);
-    border-radius: 0px 0px 20px 20px;
-    
+    border-radius: 0px 0px 20px 20px;    
 }
+
 header {
     width: 90%;
     margin: 3rem auto 0px;
-
 }
 
 header img {
@@ -55,25 +48,36 @@ main img {
     border-radius: 50%;
     border: 7px solid var(--Background-Color);
     margin-top: -55px;
+    transition: transform 1s;
+}
+
+main img:hover {
+    transform: scale(1.1)
 }
 
 h1 {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--Very_dark_desaturated_blue);
+    margin-top: 1rem;
 }
 
 h1 span {
     color: var(--Dark_grayish_blue);
+    font-weight: 400;
+    margin-left: 0.5rem;
 }
 
 h2 {
     color: var(--Dark_grayish_blue);
-    margin-bottom: 2rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1.7rem;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 .statistics {
-    border-top: 2px solid var(--Dark_gray);
+    border-top: 2px solid hsl(0, 0%, 92%);
     display: flex;
     width: 100%;
 }
@@ -85,11 +89,78 @@ h2 {
 
 .statistics h3 {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
 .statistics p {
     color: var(--Dark_grayish_blue);
-     
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer a:link {
+    color: rgb(27, 25, 25);        
+}
+    
+footer a:visited {
+    color: rgb(27, 25, 25);        
+}    
+
+footer a:hover {
+    color: rgb(27, 25, 25);        
+}
+    
+footer a:active {
+    color: rgb(27, 25, 25);        
+}
+
+
+@media only screen and (min-width: 601px) {
+
+
+    body {
+        background-color: var(--Dark_cyan);
+        background-image: url(images/bg-pattern-top.svg),
+        url(images/bg-pattern-bottom.svg); /*TODO: richtig positionieren */
+        width: 100%; /*TODO: muss weg oder? */
+        background-position: -10% 120%, 125% -100%;
+        background-repeat: no-repeat;        
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        transition: transform 1.5s;           
+    }
+
+    footer a:link {
+        color: rgb(27, 25, 25);        
+    }
+        
+    footer a:visited {
+        color: rgb(27, 25, 25);        
+    }    
+    
+    footer a:hover {
+        color: rgb(27, 25, 25);        
+    }
+        
+    footer a:active {
+        color: rgb(27, 25, 25);        
+    }
+
+    footer:hover {
+        transform: scale(1.1);
+    }
+
 }
