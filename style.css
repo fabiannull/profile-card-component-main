@@ -128,8 +128,8 @@ footer a:active {
     body {
         background-color: var(--Dark_cyan);
         background-image: url(images/bg-pattern-top.svg),
-        url(images/bg-pattern-bottom.svg); /*TODO: richtig positionieren */
-        width: 100%; /*TODO: muss weg oder? */
+        url(images/bg-pattern-bottom.svg); 
+        width: 100%; 
         background-position: -10% 120%, 125% -100%;
         background-repeat: no-repeat;        
     }
